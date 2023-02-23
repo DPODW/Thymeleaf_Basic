@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>예시</h1>
+<span th:text="${data}">html data</span>
+<h1>1. 표준 HTML 주석</h1>
+<!--
+<span th:text="${data}">html data</span>
+-->
+<h1>2. 타임리프 파서 주석</h1>
+<!--/*  타임리프에서 제공하는 실질적 주석 기능으로, 페이지 -> 소스코드 보기 를 실행해도 보여지지 않는 주석이다*/-->
+<!--/* [[${data}]] */-->
+<!--/*-->
+<span th:text="${data}">html data</span>
+<!--*/-->
+<h1>3. 타임리프 프로토타입 주석</h1>
+<!--/*타임리프로 랜더링 되지 않았을 때는 주석 처리를 하고(file 접근 같은) */-->
+<!--/*타임리프로 랜더링 되었을 때는 정상 출력하는 주석 기능이다*/-->
+<!--/*/
+<span th:text="${data}">html data</span>
+/*/-->
+</body>
+</html>

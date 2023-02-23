@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<th:block th:each="user : ${users}">
+<!--  타임리프에서 제공하는 유일한 태그-->
+<!--  반복 범위 설정이 난감할때, 타임리프 block 태그를 통해-->
+<!--  범위를 임의로 지정할수 있다.-->
+<!--  물론 정말 필요할때만 사용하는 것이 좋고, 최대한 지향해야 한다.-->
+  <div>
+    사용자 이름1 <span th:text="${user.username}"></span>
+    사용자 나이1 <span th:text="${user.age}"></span>
+  </div>
+  <div>
+    요약 <span th:text="${user.username} + ' / ' + ${user.age}"></span>
+  </div>
+</th:block>
+</body>
+</html>

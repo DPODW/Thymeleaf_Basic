@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>text vs utext</h1>
+<ul>
+  <li>th:text = <span th:text="${data}"></span></li>
+  <li>th:utext = <span th:utext="${data}"></span></li>
+</ul>
+<h1><span th:inline="none">[[...]] vs [(...)]</span></h1>
+<ul>
+  <li><span th:inline="none">[[...]] = </span>[[${data}]]</li>
+  <li><span th:inline="none">[(...)] = </span>[(${data})]</li>
+</ul>
+<!-- 이스케이프: java 단에서 view 로 model(데이터) 를 보낼때, 태그를 같이 보내개 되면 ex)<b>Spring</b>-->
+<!-- html 에선 해당 태그를 태그가 아닌 부등호로 인식한다. 이러한 일련의 과정을 이스케이프라고 한다.-->
+<!-- ++ <b>Spring</b> 를 통해서 우리는 강조 표시가 된 Spring 문자를 얻으려 했으나, 출력된건 <b></b> 태그가 그대로 출력되있는 상태이다. -->
+<!-- 그러므로 언이스케이프(utext) 를 사용하여서 태그를 보내야지, 우리가 원하는 문자가 출력된다.-->
+
+
+</body>
+</html>
